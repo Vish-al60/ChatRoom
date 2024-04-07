@@ -234,7 +234,7 @@ input:focus {
 
 @media only screen and (max-width: 426px) {
    .join-main  {
-      width: 46%;
+      width: 100%;
       padding: 10px;
    }
 }
@@ -245,10 +245,10 @@ input:focus {
    }
 }
 
-/* @media only screen and (max-width: 464px) {
+ @media only screen and (max-width: 464px) {
     .chat-form-container input[type='text'] {
       width: 50%;
-   } */
+   } 
 
 
 
