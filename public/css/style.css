@@ -70,7 +70,7 @@ a {
    justify-content: space-between;
 }
 
-.chat-main {
+/* .chat-main {
    display: grid;
    grid-template-columns: 1fr 3fr;
 }
@@ -95,7 +95,7 @@ a {
 
 .chat-sidebar ul li {
    padding: 10px 0;
-}
+} */
 
 .chat-messages {
    padding: 30px;
@@ -209,36 +209,6 @@ input:focus {
    color: #34495e;
    background: #b1d8eb;
 }
-
-@media (max-width: 700px) {
-   .chat-main {
-      display: block;
-   }
-
-   .chat-sidebar {
-      display: none;
-   }
-}
-
-@media only screen and (max-width: 426px) {
-   .join-main .btn {
-      width: 46%;
-      padding: 8px;
-   }
-}
-
-@media only screen and (max-width: 1138px) {
-   .chat-form-container input[type='text'] {
-      width: 60%;
-   }
-}
-
-@media only screen and (max-width: 464px) {
-   .chat-form-container input[type='text'] {
-      width: 100%;
-   }
-}
-
 .send-button {
    cursor: pointer;
    padding: 10px 30px;
@@ -252,12 +222,146 @@ input:focus {
    margin-left: 20px;
 }
 
-@media only screen and (max-width: 464px) {
-   .send-button {
-      margin-left: 0px;
-      margin-top: 10px;
-   }
-   .chat-messages {
-      min-height: 65vh;
+/* @media (max-width: 700px) {
+   .chat-main {
+      display: block;
+   } */
+
+   /* .chat-sidebar {
+      display:contents;
+   } */
+/* } */
+
+@media only screen and (max-width: 426px) {
+   .join-main  {
+      width: 46%;
+      padding: 10px;
    }
 }
+
+@media only screen and (max-width: 1138px) {
+   .chat-form-container input[type='text'] {
+      width: 60%;
+   }
+}
+
+/* @media only screen and (max-width: 464px) {
+    .chat-form-container input[type='text'] {
+      width: 50%;
+   } */
+
+
+
+@media only screen and (max-width: 464px) {
+   .send-button {
+     margin-left: 0px;
+   margin-top: 10px; 
+    position:relative;
+   left:5px;
+   bottom:0px; 
+   }
+    .chat-messages {
+      min-height: 65vh;
+   }
+   
+}
+@media only screen and (max-width: 412px) {
+   .send-button {
+     margin-left: 0px;
+   margin-top: 10px; 
+    position:relative;
+   left:190px;
+   bottom:49px; 
+   }
+    /* .chat-messages {
+      min-height: 65vh;
+   } */
+   
+}
+
+
+/* Basic styling */
+
+.chat-main {
+   display: flex;
+   flex-direction: row;
+   height: 100%;
+}
+
+.chat-sidebar {
+   flex: 0 0 250px; /* Sidebar takes up 250px */
+   background-color: #f4f4f4;
+   padding: 20px;
+   overflow-y: auto; /* Makes sidebar scrollable */
+}
+
+.chat-messages {
+   flex: 1; /* Fill the remaining space */
+   padding: 20px;
+   overflow-y: auto; /* Makes messages area scrollable */
+}
+
+h2, h3 {
+   margin: 0 0 20px;
+}
+
+ul {
+   padding: 0;
+   list-style: none;
+}
+
+/* Smaller screen / Mobile styles */
+@media screen and (max-width: 600px) {
+   .chat-main {
+       flex-direction: column;
+   }
+
+   .chat-sidebar {
+       height: auto;
+       flex: 0 0 150px; /* Make the sidebar take less space */
+   }
+
+   /* Optionally, hide sidebar and toggle with a button */
+   .chat-sidebar {
+       width: 50%;
+       height: 500px ;
+       position: fixed;
+       top: 0;
+       left: -100%; /* Hide by default */
+       transition: left 0.3s ease;
+   }
+
+   .chat-sidebar.active {
+       left: 0; /* Show sidebar */
+   }
+
+   /* .chat-messages {
+       margin-top: 150px; /* Make space for the sidebar */
+   */
+
+   /* Add a button to open/close sidebar */
+   /* .sidebar-toggle {
+       display: block;
+       position: fixed;
+       padding: 20px;
+       top: 0;
+       left: 0;
+       z-index: 2;
+   }
+    */
+
+
+/* Style adjustments for icons if FontAwesome is used */
+.fas {
+   margin-right: 8px;
+}
+
+}
+
+
+/* khud se adding */
+
+
+/* .chat-sidebar {
+
+
